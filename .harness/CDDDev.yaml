@@ -1,0 +1,6 @@
+environment:
+  name: CDD-Dev
+  identifier: CDDDev
+  orgIdentifier: sandbox
+  projectIdentifier: Femi_Sandbox
+  type: PreProduction

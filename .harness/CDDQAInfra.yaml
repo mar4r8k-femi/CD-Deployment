@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: CDD-QA-Infra
+  identifier: CDDQAInfra
+  orgIdentifier: sandbox
+  projectIdentifier: Femi_Sandbox
+  environmentRef: CDDQA
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: FemiLocalRancher
+    namespace: qa-env
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false

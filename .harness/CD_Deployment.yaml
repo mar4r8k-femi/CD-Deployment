@@ -16,10 +16,6 @@ pipeline:
             values: <+input>
             metadata:
               parallel: true
-          environments:
-            metadata:
-              parallel: true
-            values: <+input>
           execution:
             steps:
               - stepGroup:
@@ -67,6 +63,12 @@ pipeline:
                   type: K8sRollingRollback
                   timeout: 10m
                   spec: {}
+          environment:
+            environmentRef: <+input>
+            deployToAll: false
+            environmentInputs: <+input>
+            serviceOverrideInputs: <+input>
+            infrastructureDefinitions: <+input>
         tags: {}
         failureStrategies:
           - onFailure:

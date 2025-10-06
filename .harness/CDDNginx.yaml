@@ -1,0 +1,5 @@
+service:
+  name: CDD-Nginx
+  identifier: CDDNginx
+  orgIdentifier: sandbox
+  projectIdentifier: Femi_Sandbox

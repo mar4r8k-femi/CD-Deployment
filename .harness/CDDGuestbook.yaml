@@ -1,0 +1,5 @@
+service:
+  name: CDD-Guestbook
+  identifier: CDDGuestbook
+  orgIdentifier: sandbox
+  projectIdentifier: Femi_Sandbox

@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: CDD-Prod-Infra
+  identifier: CDDProdInfra
+  orgIdentifier: sandbox
+  projectIdentifier: Femi_Sandbox
+  environmentRef: CDDProd
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: FemiLocalRancher
+    namespace: prod-env
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false

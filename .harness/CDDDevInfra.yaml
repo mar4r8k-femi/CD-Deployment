@@ -1,0 +1,13 @@
+infrastructureDefinition:
+  name: CDD-Dev-Infra
+  identifier: CDDDevInfra
+  orgIdentifier: sandbox
+  projectIdentifier: Femi_Sandbox
+  environmentRef: CDDDev
+  deploymentType: Kubernetes
+  type: KubernetesDirect
+  spec:
+    connectorRef: FemiLocalRancher
+    namespace: dev-env
+    releaseName: release-<+INFRA_KEY_SHORT_ID>
+  allowSimultaneousDeployments: false

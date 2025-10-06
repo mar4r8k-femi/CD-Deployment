@@ -1,0 +1,20 @@
+inputSet:
+  name: Simple Input Set
+  identifier: Simple_Input_Set
+  orgIdentifier: sandbox
+  projectIdentifier: Femi_Sandbox
+  pipeline:
+    identifier: CD_Deployment
+    stages:
+      - stage:
+          identifier: deploy
+          type: Deployment
+          spec:
+            services:
+              values:
+                - serviceRef: CDDNginx
+                - serviceRef: CDDGuestbook
+            environment:
+              environmentRef: CDDProd
+              infrastructureDefinitions:
+                - identifier: CDDProdInfra

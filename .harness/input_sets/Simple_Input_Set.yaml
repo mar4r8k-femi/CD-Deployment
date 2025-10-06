@@ -13,7 +13,7 @@ inputSet:
             services:
               values:
                 - serviceRef: CDDNginx
-                # - serviceRef: CDDGuestbook
+                - serviceRef: CDDGuestbook
             environment:
               environmentRef: CDDProd
               infrastructureDefinitions:

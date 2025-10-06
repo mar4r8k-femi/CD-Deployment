@@ -3,3 +3,23 @@ service:
   identifier: CDDGuestbook
   orgIdentifier: sandbox
   projectIdentifier: Femi_Sandbox
+  serviceDefinition:
+    spec:
+      manifests:
+        - manifest:
+            identifier: guestbook_manifest
+            type: K8sManifest
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: femigithub
+                  gitFetchType: Branch
+                  paths:
+                    - /guestbook/
+                  repoName: CD-Deployment
+                  branch: main
+              skipResourceVersioning: false
+              enableDeclarativeRollback: false
+              optionalValuesYaml: false
+    type: Kubernetes

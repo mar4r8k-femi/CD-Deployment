@@ -12,10 +12,6 @@ pipeline:
         type: Deployment
         spec:
           deploymentType: Kubernetes
-          services:
-            values: <+input>
-            metadata:
-              parallel: true
           execution:
             steps:
               - stepGroup:
@@ -63,12 +59,14 @@ pipeline:
                   type: K8sRollingRollback
                   timeout: 10m
                   spec: {}
-          environment:
-            environmentRef: <+input>
-            deployToAll: false
-            environmentInputs: <+input>
-            serviceOverrideInputs: <+input>
-            infrastructureDefinitions: <+input>
+          services:
+            values: <+input>
+            metadata:
+              parallel: true
+          environments:
+            metadata:
+              parallel: false
+            values: <+input>
         tags: {}
         failureStrategies:
           - onFailure:

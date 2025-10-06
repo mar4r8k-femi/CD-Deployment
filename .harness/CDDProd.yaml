@@ -1,0 +1,6 @@
+environment:
+  name: CDD-Prod
+  identifier: CDDProd
+  orgIdentifier: sandbox
+  projectIdentifier: Femi_Sandbox
+  type: Production

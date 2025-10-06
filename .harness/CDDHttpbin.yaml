@@ -1,0 +1,5 @@
+service:
+  name: CDD-Httpbin
+  identifier: CDDHttpbin
+  orgIdentifier: sandbox
+  projectIdentifier: Femi_Sandbox

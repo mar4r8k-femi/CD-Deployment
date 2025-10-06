@@ -1,0 +1,5 @@
+service:
+  name: CDD-RedisCache
+  identifier: CDDRedisCache
+  orgIdentifier: sandbox
+  projectIdentifier: Femi_Sandbox

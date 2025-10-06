@@ -1,0 +1,6 @@
+environment:
+  name: CDD-QA
+  identifier: CDDQA
+  orgIdentifier: sandbox
+  projectIdentifier: Femi_Sandbox
+  type: PreProduction
